@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DOM II - Ejercicio 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <link rel="shortcut icon" href="../res/favicon.ico" />
+        <link rel="stylesheet" href="../res/css/styles.css" />
+        <style type="text/css">
+        #ejercicio > div { display: flex; }
+        #ejercicio > div > div { display: flex; justify-content: center; align-items: center; cursor: pointer; margin: .5em; margin-left: 0; border: 1px solid #000; width: 2em; height: 2em; font-size: 4em; }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>DOM II - Ejercicio 2</h1>
+        </header>
+        <main>
+            <h2>Simulacro de modificación de contraseñas</h2>
+            <p>Sin modificar el HTML, al hacerle click a cualquier div, guardar en memoria el objeto (es decir, se guardará en una variable).</p>
+            <p>Una vez seleccionado el div, escribir una propiedad CSS válida en el primer input (color, background, width, height, etc.).</p>
+            <p>En el segundo input escribir un valor válido para la propiedad del primer input.</p>
+            <p>Al hacer click en el botón, aplicar al div seleccionado la propiedad y el valor (recordando que se tiene el último div seleccionado en una variable).</p>
+            <p>Para la búsqueda partir de la etiqueta div#ejercicio y buscar los elementos mediante relaciones familiares</p>
+            <hr />
+            <div id="ejercicio">
+                <div>
+                    <div>#1</div>
+                    <div>#2</div>
+                    <div>#3</div>
+                    <div>#4</div>
+                    <div>#5</div>
+                </div>
+                <form>
+                    <div>
+                        <label>Escriba una propiedad CSS</label>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <label>Escriba el valor de la propiedad</label>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <input type="button" value="Asignar propiedad" />
+                    </div>
+                </form>
+                <p></p>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li>Profesor Sergio Medina</li>
+                <li>
+                    <a href="mailto:sergiod.medina@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DW2[M|T|N][A|B]%20-%20Apellido,%20Nombre" target="_blank">sergiod.medina@davinci.edu.ar</a>
+                </li>
+                <li>Programación 1</li>
+            </ul>
+        </footer>
+        <script src="js/ejercicio-2-1.js"></script>
+    </body>
+</html>

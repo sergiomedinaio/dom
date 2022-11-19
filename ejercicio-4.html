@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DOM II - Ejercicio 4</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <link rel="shortcut icon" href="../res/favicon.ico" />
+        <link rel="stylesheet" href="../res/css/styles.css" />
+        <style type="text/css">
+            #thumbs {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            #thumbs div {
+                width: 19em;
+                height: 3em;
+                border-radius: 0 0 5px 5px;
+                display: inline-block;
+                overflow: hidden;
+                cursor: pointer;
+                transition: height 0.5s;
+                padding-bottom: 1em;
+                position: relative;
+                margin-bottom: 1em;
+            }
+            #thumbs h3 {
+                position: absolute;
+                width: 100%;
+                padding: 0.3em 0;
+                background: rgba(255, 255, 255, 0.7);
+                font-size: 1.9em;
+                color: gray;
+                text-align: center;
+                border-radius: 0 0 5px 5px;
+            }
+            @media screen and (min-width: 960px) {
+                #thumbs {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>DOM II - Ejercicio 4</h1>
+        </header>
+        <main>
+            <h2>Acordeones</h2>
+            <p>Todos los div miden 190px por 30px. Al hacerle click a cada uno, se debe cambiar su alto a 265px, el texto del h3 tiene que pasar al color correspondiente (lo obtienen del alt de la img).</p>
+            <p>Cuando se clickea en el mismo div o en otro, se debe achicar el anterior (volver a 30px) y el h3 pasa "grey". Contemplar 3 estados del efecto:</p>
+            <ul>
+                <li>Si no hay div seleccionado, se debe desplegar un nuevo div.</li>
+                <li>Si se hace click en un div ya desplegado, se debe replegar y ya no hay ningún div seleccionado.</li>
+                <li>Si se hace click en un div distinto, se repliega el último seleccionado y se despliega un nuevo div.</li>
+            </ul>
+            <p>Utilizar una variable global que se encargue de guardar el div seleccionado.</p>
+            <hr />
+            <div id="thumbs">
+                <div>
+                    <h3>Color 1</h3>
+                    <img src="items/rojo.jpg" alt="red" />
+                </div>
+                <div>
+                    <h3>Color 2</h3>
+                    <img src="items/verde.jpg" alt="lightgreen" />
+                </div>
+                <div>
+                    <h3>Color 3</h3>
+                    <img src="items/azul.jpg" alt="blue" />
+                </div>
+                <div>
+                    <h3>Color 4</h3>
+                    <img src="items/amarillo.jpg" alt="yellow" />
+                </div>
+                <div>
+                    <h3>Color 5</h3>
+                    <img src="items/violeta.jpg" alt="magenta" />
+                </div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li>Profesor Sergio Medina</li>
+                <li>
+                    <a href="mailto:sergiod.medina@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DW2[M|T|N][A|B]%20-%20Apellido,%20Nombre" target="_blank">sergiod.medina@davinci.edu.ar</a>
+                </li>
+                <li>Programación 1</li>
+            </ul>
+        </footer>
+        <script src="js/ejercicio-4-1.js"></script>
+    </body>
+</html>

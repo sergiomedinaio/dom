@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DOM II - Ejercicio 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <link rel="shortcut icon" href="../res/favicon.ico" />
+        <link rel="stylesheet" href="../res/css/styles.css" />
+        <style type="text/css">
+            div#galeria {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+            }
+            div#galeria img {
+                width: 100%;
+            }
+            div#galeria > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+            }
+            div#galeria > div > img {
+                width: 20%;
+                cursor: pointer;
+            }
+            div#galeria > div > img:hover {
+                opacity: 0.75;
+            }
+            div#galeria > div > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 1em 0;
+                width: 60%;
+            }
+            div#galeria > div > div > img {
+                width: 30%;
+                cursor: pointer;
+            }
+            div#galeria > div > div > img:hover {
+                opacity: 0.75;
+            }
+            @media screen and (min-width: 500px) {
+                div#galeria {
+                    max-width: 40em;
+                }
+                div#galeria > div {
+                    max-width: 40em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>DOM II - Ejercicio 3</h1>
+        </header>
+        <main>
+            <h2>Galería dinámica de imágenes</h2>
+            <p>Sin modificar el HTML, crear un array con todas las imágenes que hay en la carpeta items.</p>
+            <p>Con JavaScript obtener los elementos #anterior, #siguiente, #foto y las imágenes miniaturas.</p>
+            <p>Cuando se hace clicken alguna de las 3 fotos, el srcde la #foto debe cambiar por el de la clickeada.</p>
+            <p>Los botones #anterior y #siguiente deben cambiar las miniaturas:</p>
+            <ul>
+                <li>De tres en tres (ejercico-3-1.js).</li>
+                <li>De una en una, como desplazándolas (ejercico-3-2.js).</li>
+            </ul>
+            <hr />
+            <div id="galeria">
+                <img src="items/queen-01.jpg" alt="Foto" id="foto" />
+                <div>
+                    <img src="items/prev.png" alt="Anterior" id="anterior" />
+                    <div>
+                        <img src="items/queen-01.jpg" alt="Miniatura #1" />
+                        <img src="items/queen-02.jpg" alt="Miniatura #2" />
+                        <img src="items/queen-03.jpg" alt="Miniatura #3" />
+                    </div>
+                    <img src="items/next.png" alt="Siguiente" id="siguiente" />
+                </div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li>Profesor Sergio Medina</li>
+                <li>
+                    <a href="mailto:sergiod.medina@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DW2[M|T|N][A|B]%20-%20Apellido,%20Nombre" target="_blank">sergiod.medina@davinci.edu.ar</a>
+                </li>
+                <li>Programación 1</li>
+            </ul>
+        </footer>
+        <script src="js/ejercicio-3-1.js"></script>
+        <!-- <script src="js/ejercicio-3-2.js"></script> -->
+    </body>
+</html>
